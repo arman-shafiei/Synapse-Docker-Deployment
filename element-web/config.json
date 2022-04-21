@@ -30,7 +30,7 @@
     "default_theme": "dark",
     "roomDirectory": {
         "servers": [
-            "myproject.local"
+            "synapse"
         ]
     },
     "piwik": {
