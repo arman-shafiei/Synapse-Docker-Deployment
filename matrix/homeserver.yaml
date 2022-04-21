@@ -42,7 +42,7 @@ modules:
 # lowercase and may contain an explicit port.
 # Examples: matrix.org, localhost:8080
 #
-server_name: "kavano.org"
+server_name: "example.com"
 
 # When running as a daemon, the file to store the pid in
 #
@@ -65,7 +65,7 @@ pid_file: /data/homeserver.pid
 # Otherwise, it should be the URL to reach Synapse's client HTTP listener (see
 # 'listeners' below).
 #
-public_baseurl: https://arman-project.kavano.org
+public_baseurl: https://example.com
 
 # Set the soft limit on the number of file descriptors synapse can use
 # Zero is used to indicate synapse should set the soft limit to the
@@ -562,12 +562,10 @@ templates:
 # any intermediate certificates (for instance, if using certbot, use
 # `fullchain.pem` as your certificate, not `cert.pem`).
 #
-#tls_certificate_path: "/data/kavano.org.tls.crt"
 tls_certificate_path: "/data/certificate.pem"
 
 # PEM-encoded private key for TLS
 #
-#tls_private_key_path: "/data/kavano.org.tls.key"
 tls_private_key_path: "/data/private_key.pem"
 
 # Whether to verify TLS server certificates for outbound federation requests.
@@ -740,25 +738,25 @@ caches:
 #
 # Example Postgres configuration:
 #
-#database:
-#  name: psycopg2
-#  txn_limit: 10000
-#  args:
-#    user: synapse
-#    password: 123456
-#    database: synapse
-#    host: postgres
-#    port: 5432
-#    cp_min: 5
-#    cp_max: 10
+database:
+  name: psycopg2
+  txn_limit: 10000
+  args:
+    user: synapse
+    password: <password>
+    database: synapse
+    host: postgres
+    port: 5432
+    cp_min: 5
+    cp_max: 10
 #
 # For more information on using Synapse with Postgres,
 # see https://matrix-org.github.io/synapse/latest/postgres.html.
 #
-database:
-  name: sqlite3
-  args:
-    database: /data/homeserver.db
+#database:
+#  name: sqlite3
+#  args:
+#    database: /data/homeserver.db
 
 
 ## Logging ##
@@ -766,7 +764,7 @@ database:
 # A yaml python logging config file as described by
 # https://docs.python.org/3.7/library/logging.config.html#configuration-dictionary-schema
 #
-log_config: "/data/kavano.org.log.config"
+log_config: "/data/example.com.log.config"
 
 
 ## Ratelimiting ##
@@ -1183,7 +1181,6 @@ allow_guest_access: false
 # (By default, no suggestion is made, so it is left up to the client.
 # This setting is ignored unless public_baseurl is also set.)
 #
-#default_identity_server: https://arman-project.kavano.org
 default_identity_server: smtp.mail.yahoo.com:587
 #default_identity_server: smtp.mail.yahoo.com:465
 #default_identity_server: smtp.gmail.com
@@ -1412,7 +1409,7 @@ form_secret: "i~~SBmlLBew6#O6J+OUr:u&U9lu0Y.fm^KE=9M9w9;SB,WCbAR"
 
 # Path to the signing key to sign messages with
 #
-signing_key_path: "/data/kavano.org.signing.key"
+signing_key_path: "/data/example.com.signing.key"
 
 # The keys that the server used to sign messages with but won't use
 # to sign new messages.
@@ -1477,7 +1474,7 @@ old_signing_keys:
 #
 
 trusted_key_servers:
-        - server_name: "arman-project.kavano.org"
+        - server_name: "example.com"
           accept_keys_insecurely: true
 # Uncomment the following to disable the warning that is emitted when the
 # trusted_key_servers include 'matrix.org'. See above.
