@@ -29,6 +29,7 @@ services:
                 volumes:
                         - ./element-web/config.json:/app/config.json
                         - ./element-web/default.conf:/etc/nginx/conf.d/default.conf
+                        - ./element-web/nginx.conf:/etc/nginx/nginx.conf
                         - ./certificates:/etc/nginx/conf.d/certificates
                 ports:
                         - 443:443
