@@ -339,7 +339,7 @@ listeners:
 
 # How to reach the server admin, used in ResourceLimitError
 #
-admin_contact: 'armanshafiei77@yahoo.com'
+admin_contact: 'admin@example.com'
 
 # Global blocking
 #
@@ -562,11 +562,11 @@ templates:
 # any intermediate certificates (for instance, if using certbot, use
 # `fullchain.pem` as your certificate, not `cert.pem`).
 #
-tls_certificate_path: "/data/certificate.pem"
+tls_certificate_path: "/data/cert.pem"
 
 # PEM-encoded private key for TLS
 #
-tls_private_key_path: "/data/private_key.pem"
+tls_private_key_path: "/data/key.pem"
 
 # Whether to verify TLS server certificates for outbound federation requests.
 #
@@ -660,7 +660,7 @@ allow_device_name_lookup_over_federation: false
 # The number of events to cache in memory. Not affected by
 # caches.global_factor.
 #
-event_cache_size: 100K
+event_cache_size: 128K
 
 caches:
   # Controls the global cache factor, which is the default cache factor
@@ -1181,7 +1181,7 @@ allow_guest_access: false
 # (By default, no suggestion is made, so it is left up to the client.
 # This setting is ignored unless public_baseurl is also set.)
 #
-default_identity_server: smtp.mail.yahoo.com:587
+default_identity_server: smtp.example.com
 #default_identity_server: smtp.mail.yahoo.com:465
 #default_identity_server: smtp.gmail.com
 
@@ -2055,7 +2055,7 @@ ui_auth:
 email:
   # The hostname of the outgoing SMTP server to use. Defaults to 'localhost'.
   #
-  smtp_host: smtp.mail.yahoo.com
+  smtp_host: smtp.example.com
   #smtp_host: smtp.gmail.com
 
   # The port on the mail server for outgoing SMTP. Defaults to 25.
@@ -2066,8 +2066,8 @@ email:
   # Username/password for authentication to the SMTP server. By default, no
   # authentication is attempted.
   #
-  smtp_user: "armanshafiei77@yahoo.com"
-  smtp_pass: "jcztfupmjeesbgvj"
+  smtp_user: "admin@example.com"
+  smtp_pass: <password>
 
   # Uncomment the following to require TLS transport security for SMTP.
   # By default, Synapse will connect over plain text, and will then switch to
@@ -2094,12 +2094,12 @@ email:
   # Note that the placeholder must be written '%(app)s', including the
   # trailing 's'.
   #
-  notif_from: "Arman from QIAU"
+  notif_from: "Admin from example.com"
 
   # app_name defines the default value for '%(app)s' in notif_from and email
   # subjects. It defaults to 'Matrix'.
   #
-  app_name: Arman_project
+  app_name: Example Chat
 
   # Uncomment the following to enable sending emails for messages that the user
   # has missed. Disabled by default.
