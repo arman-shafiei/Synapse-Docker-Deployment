@@ -45,7 +45,7 @@ services:
                 image: matrixdotorg/synapse:v1.60.0
                 container_name: synapse
                 volumes:
-                        - ./matrix:/data
+                        - ./synapse:/data
                         - ./certificates:/data/certificates
                 networks:
                         - synapse
