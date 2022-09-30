@@ -24,7 +24,7 @@ services:
                         TZ: Asia/Tehran
                 restart: unless-stopped
         web:
-                image: vectorim/element-web
+                image: vectorim/element-web:v1.11.0
                 container_name: web
                 volumes:
                         - ./element-web/config.json:/app/config.json
@@ -40,7 +40,7 @@ services:
                         TZ: Asia/Tehran
                 restart: unless-stopped
         synapse:
-                image: matrixdotorg/synapse
+                image: matrixdotorg/synapse:v1.60.0
                 container_name: synapse
                 volumes:
                         - ./matrix:/data
