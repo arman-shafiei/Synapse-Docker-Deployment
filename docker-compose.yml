@@ -39,6 +39,8 @@ services:
                 environment:
                         TZ: Asia/Tehran
                 restart: unless-stopped
+                depends_on:
+                        - synapse
         synapse:
                 image: matrixdotorg/synapse:v1.60.0
                 container_name: synapse
@@ -50,6 +52,9 @@ services:
                 environment:
                         TZ: Asia/Tehran
                 restart: unless-stopped
+                depends_on:
+                        - postgres
+                        - redis
 
 networks:
         synapse:
