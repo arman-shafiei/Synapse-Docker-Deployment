@@ -7,15 +7,15 @@ You should change the variables and names to make use of it.
 
 The file structure is as follows:
 
-1- **certificates**: Contains TLS certificates.
+- **certificates**: Contains TLS certificates.
 
-2- **element-web**: Contains frontend and nginx webserver configs.
+- **element-web**: Contains frontend and nginx webserver configs.
 
-3- **synapse**: Contains Matrix Synapse homeserver config file.
+- **synapse**: Contains Matrix Synapse homeserver config file.
 
-4- **.env.example**: Consists of environment variables to be used for database, etc.
+- **.env.example**: Consists of environment variables to be used for database, etc.
 
-5- **docker-compose.yml**: Main docker compose file to deploy our services.
+- **docker-compose.yml**: Main docker compose file to deploy our services.
 
 ## Deployment
 To deploy Synapse first change the .env.example to .env:
